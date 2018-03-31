@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1972682134258450}
+  m_IsPrefabParent: 1
+--- !u!1 &1972682134258450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4310533458321138}
+  - component: {fileID: 114663682430503018}
+  m_Layer: 0
+  m_Name: Map Incubator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4310533458321138
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1972682134258450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114663682430503018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1972682134258450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b19a94b1a353e41815c9c3b2585395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+  - {fileID: 1954734481857058, guid: ef4d862aae5c06b42a3da81abdd91ca8, type: 2}
+  - {fileID: 1253170698446632, guid: 99f8caba748837042beb094d1a1d63ea, type: 2}
+  - {fileID: 1995893528236360, guid: a7d610f68a113a04a84d45dd94212b7b, type: 2}
+  - {fileID: 1884977100362386, guid: 81b80f04512845344bab0e24e4d877de, type: 2}
+  - {fileID: 1513055837570188, guid: 2271d0485fe381d4d97b0ea044aa0056, type: 2}
+  - {fileID: 1161199947187966, guid: b047ae38372537e43a3d7aa496136c8e, type: 2}
+  - {fileID: 1588314191291164, guid: 2dfe1e77ab6152e418871a383dc194d4, type: 2}
+  - {fileID: 1188417433581978, guid: 1d8e8be3b82ee434c8360fb3bcae702d, type: 2}
+  campWallPos:
+  - {x: -0.75, y: -8.25}
+  - {x: -0.75, y: -7.75}
+  - {x: -0.75, y: -7.25}
+  - {x: -0.25, y: -7.25}
+  - {x: 0.25, y: -7.25}
+  - {x: 0.75, y: -7.25}
+  - {x: 0.75, y: -7.75}
+  - {x: 0.75, y: -8.25}
+  campWall: []
+  enemyBornPos:
+  - {x: -9, y: 7}
+  - {x: 0, y: 7}
+  - {x: 9, y: 7}
+  - {x: -5, y: 4}
+  - {x: 5, y: 4}
+  - {x: -9, y: 0}
+  - {x: 9, y: 0}
+  reinforceCampTimeVal: 0
+  isCampReinforced: 0
+  reinforceCampTime: 20
+  uiEnemyNum: {fileID: 0}
