@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour {
     public GameObject quitDialog;
     //下一关提示
     public GameObject nextStagePrompt;
+    //输入名字对话框
+    public GameObject enterNameDialog;
     //记录所有敌人
     public List<GameObject> enemies;
     //
@@ -122,7 +124,11 @@ public class GameManager : MonoBehaviour {
     }
     private void ReturnToMainMenu()
     {
-        SceneManager.LoadScene("Start");
+        //暂停游戏
+        Time.timeScale = 0;
+        //暂停声音
+        AudioListener.pause = true;
+        enterNameDialog.SetActive(true);
     }
    private void EnterNextStage()
     {

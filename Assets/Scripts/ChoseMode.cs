@@ -5,28 +5,57 @@ using UnityEngine.SceneManagement;
 
 public class ChoseMode : MonoBehaviour {
 
-    private int mode = 1;
+    private int mode = 0;
+    private Transform[] arryMode; 
     public Transform pos_1;
     public Transform pos_2;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    public Transform pos_3;
+
+    public int Mode
+    {
+        get
+        {
+            return mode;
+        }
+
+        set
+        {
+            if (value < 3 && value >= 0) 
+            {
+                mode = value;
+            }
+        }
+    }
+
+    private void Start()
+    {
+        arryMode = new Transform[3];
+        arryMode[0] = pos_1;
+        arryMode[1] = pos_2;
+        arryMode[2] = pos_3;
+    }
+    // Update is called once per frame
+    void Update () {
+
         if (Input.GetKeyDown(KeyCode.W))
         {
-            mode = 1;
-            transform.position = pos_1.position;
+            Mode--;
+
         }else if (Input.GetKeyDown(KeyCode.S))
         {
-            mode = 2;
-            transform.position = pos_2.position;
+            Mode++;
         }
-        if (mode == 1 && Input.GetKeyDown(KeyCode.Return))
+
+        transform.position = arryMode[Mode].position;
+
+        if (Mode == 0 && Input.GetKeyDown(KeyCode.Return))
         {
             SceneManager.LoadScene("Game");
+        }
+
+        if (Mode == 2 && Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene("Rankings");
         }
     }
 }
